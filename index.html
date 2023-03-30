@@ -7,12 +7,22 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 </head>
 <body>
+  <nav>
+    <a  herf="#/">ML</a>
+    <a  herf="#/Finance">Finance</a>
+  </nav>
   <div id="app">Walking to you ~</div>
   <script>
     window.$docsify = {
-      //...
+      loadSidebar: true,//侧边栏
+      alias: {
+      '/.*/_sidebar.md': '/_sidebar.md'//避免不必要的回退
+      },  
+      maxLevel: 4,//最大标题级别
+      loadNavbar: true,//导航栏
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
 </html>
